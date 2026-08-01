@@ -1,0 +1,11 @@
+## observations ##
+
+1. Complete Post-Cleaning Integrity & Zero Null ValuesPost-cleaning validation shows 4 non-null records across all 6 columns (Name, Age, City, Gender, Email, Join Date), achieving a 100% data completion rate.Unidentifiable records (such as the previous entry lacking a name/join date) and duplicate rows were successfully resolved.
+
+2. Male-Skewed Demographic DistributionAmong active customer profiles, 75% are Male ($N=3$) and 25% are Female ($N=1$).Business Impact: Communication strategies and product recommendations should consider this current male-leaning customer ratio while exploring campaigns to increase female user acquisition.
+
+3. Young Adult Age Bracket (Average Age: 25.5 Years)Customer ages range between 22 and 30 years, with a mean age of 25.5 years and a median of 25.0 years.Business Impact: The customer base falls firmly within the Gen Z and young Millennial demographics, favoring mobile-first experiences, digital engagement, and modern brand communication.
+
+4. Broad Geographical Reach Across Global Tech & Commercial HubsCustomers are evenly distributed (25% per city) across four key metropolitan markets: Los Angeles, New York, Mumbai, and Delhi.Business Impact: The footprint spans both North American and Indian metro regions, indicating opportunity for localized cross-border digital campaigns.
+
+5. Persistent Email Syntax Anomaly Requiring Ingestion RulesWhile records are complete, Charlie’s email (charlie@example) remains missing a top-level domain (TLD like .com).Business Impact: Synthetic or malformed emails bypass basic string checks if front-end validation is missing. A regex-based email validation rule should be deployed on form submission fields.
